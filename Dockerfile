@@ -10,7 +10,7 @@ COPY requirements.txt /app
 # Update apt repositories, install packages, upgrade pip, and install requirements from requirements.txt
 # Also install psutil and a specific version of aiohttp
 RUN apt-get update && \
-    pip install --no-cache-dir --upgrade pip && \
+    # pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt && \
     pip install -U psutil && \
     pip install -U aiohttp==3.9.0rc0
